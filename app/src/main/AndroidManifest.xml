@@ -20,6 +20,10 @@
             android:name=".level1Activity"
             android:label="@string/title_activity_level1" >
         </activity>
+        <activity
+            android:name=".GamePanel"
+            android:label="@string/title_activity_game_panel" >
+        </activity>
     </application>
 
 </manifest>
