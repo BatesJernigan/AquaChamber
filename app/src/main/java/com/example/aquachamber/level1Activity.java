@@ -2,6 +2,7 @@ package com.example.aquachamber;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.VelocityTracker;
 import android.view.Window;
 import android.view.WindowManager;
@@ -14,7 +15,9 @@ public class level1Activity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("demo", "inside of on create");
         super.onCreate(savedInstanceState);
+
 
         // turn title off
         requestWindowFeature(Window.FEATURE_NO_TITLE);

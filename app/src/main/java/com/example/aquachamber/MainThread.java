@@ -1,6 +1,7 @@
 package com.example.aquachamber;
 
 import android.graphics.Canvas;
+import android.util.Log;
 import android.view.SurfaceHolder;
 
 import com.example.aquachamber.GamePanel;
@@ -23,6 +24,7 @@ public class MainThread extends Thread
     @Override
     public void run()
     {
+        Log.d("demo", "inside of on thread run");
         long startTime;
         long timeMillis;
         long waitTime;
@@ -59,7 +61,7 @@ public class MainThread extends Thread
 
             try{
                 this.sleep(waitTime);
-            }catch(Exception e){}
+            } catch(Exception e){}
 
             totalTime += System.nanoTime()-startTime;
             frameCount++;
@@ -68,7 +70,7 @@ public class MainThread extends Thread
                 averageFPS = 1000/((totalTime/frameCount)/1000000);
                 frameCount =0;
                 totalTime = 0;
-                System.out.println(averageFPS);
+                Log.d("demo", "averageFPS: " + averageFPS);
             }
         }
     }
