@@ -14,13 +14,28 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:onClick="goToLevel1"/>
+        android:onClick="goToLevel1"
+        android:id="@+id/textView" />
 
     <TextView
         android:text="EXIT: RUN HOME TO YOUR MAMA!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:onClick="finishActivity"/>
+        android:onClick="finishActivity"
+        android:id="@+id/textView2" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="46dp"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
 
 </RelativeLayout>
