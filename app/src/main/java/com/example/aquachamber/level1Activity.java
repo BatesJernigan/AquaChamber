@@ -35,24 +35,25 @@ public class level1Activity extends Activity {
     private int yDelta;
     private VelocityTracker mVelocityTracker = null;
     private static final String DEBUG_TAG = "Velocity";
-    private SensorManager mSensorManager;
-    private Sensor gyroscope;
+    //private SensorManager mSensorManager;
+    //private Sensor gyroscope;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //turn title off
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+
         super.onCreate(savedInstanceState);
-        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        gyroscope = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
+        //mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        //gyroscope = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
 
 
         //sets ContentView
-        setContentView(R.layout.activity_level1);
-
-        // turn title off
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(new GamePanel(this));
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+/*
         ImageView gameBall = (ImageView) findViewById(R.id.gameBall);
         gameBall.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -104,14 +105,15 @@ public class level1Activity extends Activity {
                 }
                 return true;
             }
-        });
+        });*/
 
 
     }
 
+    /*
     public void onSensorChanged(SensorEvent event){
         Log.d("gyroscope", "X Rate of rotation: " + event.values[0]);
         Log.d("gyroscope", "Y Rate of rotation: " + event.values[1]);
         Log.d("gyroscope", "Z Rate of rotation: " + event.values[2]);
-    }
+    }*/
 }
